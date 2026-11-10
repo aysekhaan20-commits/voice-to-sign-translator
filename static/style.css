@@ -1,0 +1,152 @@
+
+.header {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header h1 {
+    font-size: 40px;
+    color: #e7e6e6;
+}
+
+.header p {
+    font-size: 18px;
+    color: #ddd;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(to right, #2b5876, #4e4376);
+    color: white;
+    text-align: center;
+}
+
+/* Navbar */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 40px;
+    background: rgba(0,0,0,0.3);
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar li {
+    cursor: pointer;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero h1 {
+    font-size: 2.5rem;
+}
+
+.subtitle {
+    color: #ccc;
+    margin-bottom: 30px;
+}
+
+/* Button */
+button {
+    padding: 15px 25px;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    background: #00c6ff;
+    color: black;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0072ff;
+    color: white;
+}
+
+/* Output Boxes */
+.output-box {
+    margin: 20px auto;
+    padding: 20px;
+    width: 60%;
+    background: rgba(255,255,255,0.1);
+    border-radius: 10px;
+}
+
+.output-box.ai {
+    border: 2px solid #00c6ff;
+}
+
+.input-section {
+    margin-top: 20px;
+}
+
+.input-section input {
+    padding: 10px;
+    width: 300px;
+    border-radius: 8px;
+    border: none;
+}
+
+.input-section button {
+    margin-left: 10px;
+}
+
+.sign-container {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.sign-box {
+    padding: 15px 20px;
+    background: #00c6ff;
+    color: black;
+    border-radius: 10px;
+    font-weight: bold;
+    opacity: 0;
+    transform: translateY(30px) scale(0.7);
+    animation: popIn 0.5s ease-out forwards;
+}
+
+.sign-img {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+    animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+    from {
+        transform: scale(0.5);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes popIn {
+    0% {
+        opacity: 0;
+        transform: translateY(30px) scale(0.7);
+    }
+    60% {
+        opacity: 1;
+        transform: translateY(-5px) scale(1.05);
+    }
+    100% {
+        transform: translateY(0) scale(1);
+    }
+}
